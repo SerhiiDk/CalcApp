@@ -35,12 +35,12 @@ namespace CalcApp
         }
         public double Multi()
         {
-            return Value1 * Value2; 
+            return  (double)Math.Round(Value1 * Value2, 2); 
         }
 
         public double Divide()
         {
-            return Value1 / Value2;
+            return (double)Math.Round(Value1 / Value2, 3);
         }
 
     }

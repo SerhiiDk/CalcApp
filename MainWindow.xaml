@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalcApp"
         mc:Ignorable="d"
-        Title="Lommeregner" Height="500" Width="410">
-    <Grid Background="#f1f1f1" Margin="5">
+        Title="Lommeregner" Height="500" Width="410" KeyDown="Grid_KeyDown">
+    <Grid Background="#f1f1f1" Margin="5" >
         <Grid.RowDefinitions>
             <RowDefinition Height="45" />
             <RowDefinition Height="60" />
@@ -31,13 +31,13 @@
                 <ColumnDefinition Width="95" />
                 <ColumnDefinition Width="95" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Grid.Row="0"  Content="%" FontSize="18" Margin="4"/>
+            <Button Grid.Column="0" Grid.Row="0"  Content="%" FontSize="18" Margin="4" Click="Button_Percent"/>
             <Button Grid.Column="1" Grid.Row="0"  Content="CE" FontSize="18" Margin="4" Click="Button_clean"/>
             <Button Grid.Column="2" Grid.Row="0"  Content="C" FontSize="18" Margin="4" Click="Button_clean"/>
             <Button Grid.Column="3" Grid.Row="0"  Content="slet" FontSize="18" Margin="4" Click="Button_Slet"/>
-            <Button Grid.Column="0" Grid.Row="1"  Content="1/x" FontSize="18" Margin="4"/>
+            <Button Grid.Column="0" Grid.Row="1"  Content="1/x" FontSize="18" Margin="4" Click="Button_Devide_x"/>
             <Button Grid.Column="1" Grid.Row="1"  Content="x2" FontSize="18" Margin="4" Click="Button_Click_Pow"/>
-            <Button Grid.Column="2" Grid.Row="1"  Content="2x" FontSize="18" Margin="4"/>
+            <Button Grid.Column="2" Grid.Row="1"  Content="√" FontSize="18" Margin="4" Click="Button_Pow"/>
             <Button Grid.Column="3" Grid.Row="1"  Content="/" FontSize="18" Margin="4" Click="Operator_Value"/>
             <Button Grid.Column="0" Grid.Row="2"  Content="7" FontSize="18" Margin="4" Click="Button_click" Background="#ffffff" />
             <Button Grid.Column="1" Grid.Row="2"  Content="8" FontSize="18" Margin="4" Click="Button_click" Background="#ffffff" />
@@ -51,7 +51,7 @@
             <Button Grid.Column="1" Grid.Row="4"  Content="2" FontSize="18" Margin="4" Click="Button_click" Background="#ffffff"/>
             <Button Grid.Column="2" Grid.Row="4"  Content="3" FontSize="18" Margin="4" Click="Button_click" Background="#ffffff"/>
             <Button Grid.Column="3" Grid.Row="4"  Content="+" FontSize="18" Margin="4" Click="Operator_Value"/>
-            <Button Grid.Column="0" Grid.Row="5"  Content="+-" FontSize="18" Margin="4" Background="#ffffff" />
+            <Button Grid.Column="0" Grid.Row="5"  Content="+-" FontSize="18" Margin="4" Background="#ffffff" Click="Button_Change_Opt" />
             <Button Grid.Column="1" Grid.Row="5"  Content="0" FontSize="18" Margin="4" Click="Button_click"  Background="#ffffff" />
             <Button Grid.Column="2" Grid.Row="5"  Content="," FontSize="18" Margin="4" Click="Button_double" Background="#ffffff" />
             <Button Grid.Column="3" Grid.Row="5"  Content="=" FontSize="18" Margin="4" Click="Button_Result" Background="#92abf0"/>
